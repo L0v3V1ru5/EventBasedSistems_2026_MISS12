@@ -24,7 +24,7 @@ public class GeneratorSubscriptii {
     private final Operator[] planOperatoriCompany;
 
     public Subscriptie genereazaSubscriptie(int index, long seed) {
-        SplittableRandom generatorAleator = new SplittableRandom(seed + index); // ?
+        SplittableRandom generatorAleator = new SplittableRandom(seed + index);
         Subscriptie subscriptie = new Subscriptie();
 
         if (planPrezentaCampuri.get(Camp.company)[index]) {
@@ -60,7 +60,7 @@ public class GeneratorSubscriptii {
             subscriptie.adaugaPredicatData("date", operator.getSimbol(), data);
         }
 
-        // daca o subscriptie ar iesi goala fortam adaugarea campului company.
+        // daca o subscriptie ar iesi goala fortam adaugarea campului company
         if (subscriptie.esteGoala()) {
             String companie = furnizorCompanii.alegeCompanieAleator(generatorAleator);
             subscriptie.adaugaPredicatText("company", Operator.EGAL.getSimbol(), companie);

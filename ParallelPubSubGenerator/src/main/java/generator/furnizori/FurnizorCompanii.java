@@ -30,7 +30,6 @@ public class FurnizorCompanii {
 
     // SplittableRandom permite seed-uri diferite pentru fiecare thread
     // pe cand altele (ThreadLocalRandom) nu
-    // ?
     public String alegeCompanieAleator(SplittableRandom generatorAleator) {
         int index = generatorAleator.nextInt(companii.size());
         return companii.get(index);

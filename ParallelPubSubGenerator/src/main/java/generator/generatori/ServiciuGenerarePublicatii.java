@@ -10,12 +10,11 @@ import java.util.concurrent.Callable;
 public class ServiciuGenerarePublicatii implements Callable<List<Publicatie>> {
 
     private final GeneratorPublicatii generatorPublicatii;
-    private final int numarElemente; // ?
+    private final int numarElemente;
     private final long seed;
 
     @Override
     public List<Publicatie> call() {
         return generatorPublicatii.genereaza(numarElemente, seed);
-        // for
     }
 }
